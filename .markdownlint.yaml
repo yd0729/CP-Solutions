@@ -1,0 +1,27 @@
+default: true
+blank_lines: true
+bullet: true
+html: true
+indentation: true
+line_length: false
+spaces: true
+url: true
+whitespace: true
+
+MD046: false
+MD033: false
+MD024: false
+MD036: false
+MD001: false
+MD028: false
+MD003: false
+MD022: false
+MD029: false
+MD026: false
+MD025: false
+MD020: false
+MD040: false
+MD041: false
+MD045: false
+MD049: false
+MD007: false
