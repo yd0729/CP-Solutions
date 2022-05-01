@@ -2,9 +2,7 @@
     "configurations": [
         {
             "name": "Mac",
-            "includePath": [
-                "${workspaceFolder}/src/Solutions/LeetCode/include"
-            ],
+            "includePath": [],
             "defines": [
                 "YD_DEBUG"
             ],
@@ -24,12 +22,13 @@
             "compilerPath": "/usr/bin/clang",
             "compilerArgs": [
                 "-I",
-                "src/Solutions/include",
-                "src",
+                ".vscode/cpp/include",
                 "-include",
                 "bits/stdc++.h",
                 "-include",
-                "leetcode-algorithm.hpp"
+                "leetcode-algorithm.hpp",
+                "-include",
+                "fast_io.hpp"
             ]
         }
     ],

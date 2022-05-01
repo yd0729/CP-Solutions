@@ -156,14 +156,19 @@
 					"-fdiagnostics-color=always",
 					"-g",
 					"-std=c++20",
-					"-I",
-					"**/include",
+					"-O3",
 					"-D",
 					"YD_DEBUG",
-					// "-include",
-					// ".vscode/include/bits/stdc++.h",
+					"-I",
+					".vscode/cpp/include",
+					"-include",
+					"bits/stdc++.h",
+					"-include",
+					"leetcode-algorithm.hpp",
 					"-include-pch",
-					"build/**.pch",
+					".vscode/cpp/pch/stdc++.h.gch",
+					"-include-pch",
+					".vscode/cpp/pch/leetcode-algorithm.hpp.gch",
 					"${file}",
 					"-o",
 					"${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
@@ -178,31 +183,15 @@
 					"kind": "build",
 					"isDefault": true
 				},
-				"windows": {
-					"args": [
-						"-fdiagnostics-color=always",
-						"-g",
-						"-std=c++20",
-						"-target", // link to libstdc++ using gcc / g++ 
-						"x86_64-pc-windows-gnu", // 注释掉的话在 Windows 上会默认 link to Microsoft's STL using MSVC
-						// "-H", // 查看可以使用的预编译文件（前面带 ! 的是预编译的）
-						"-D",
-						"YD_DEBUG",
-						"${file}",
-						"-o",
-						// "${workspaceFolder}/build/test.exe"
-						"${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
-					],
-				}
 			},
 		],
 		"version": "2.0.0"
 	},
 	"extensions": {
 		"recommendations": [
-			"ms-vscode.cpptools-extension-pack",
 			"vadimcn.vscode-lldb",
-			"rust-lang.rust"
+			"rust-lang.rust",
+			"rhangai.file-template"
 		]
 	},
 }
