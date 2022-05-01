@@ -191,7 +191,8 @@
 		"recommendations": [
 			"vadimcn.vscode-lldb",
 			"rust-lang.rust",
-			"rhangai.file-template"
+			"rhangai.file-template",
+			"DavidAnson.vscode-markdownlint"
 		]
 	},
 }
