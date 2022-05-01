@@ -1,0 +1,208 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"jupyter.jupyterServerType": "local",
+		"git.ignoreLimitWarning": true,
+		"C_Cpp.default.includePath": [
+			"inculde",
+			".vscode"
+		],
+		"files.associations": {
+			"initializer_list": "cpp",
+			"__bit_reference": "cpp",
+			"__bits": "cpp",
+			"__config": "cpp",
+			"__debug": "cpp",
+			"__errc": "cpp",
+			"__hash_table": "cpp",
+			"__locale": "cpp",
+			"__mutex_base": "cpp",
+			"__node_handle": "cpp",
+			"__nullptr": "cpp",
+			"__split_buffer": "cpp",
+			"__string": "cpp",
+			"__threading_support": "cpp",
+			"__tree": "cpp",
+			"__tuple": "cpp",
+			"any": "cpp",
+			"array": "cpp",
+			"atomic": "cpp",
+			"barrier": "cpp",
+			"bit": "cpp",
+			"bitset": "cpp",
+			"cctype": "cpp",
+			"cfenv": "cpp",
+			"charconv": "cpp",
+			"chrono": "cpp",
+			"cinttypes": "cpp",
+			"clocale": "cpp",
+			"cmath": "cpp",
+			"codecvt": "cpp",
+			"compare": "cpp",
+			"complex": "cpp",
+			"concepts": "cpp",
+			"condition_variable": "cpp",
+			"csetjmp": "cpp",
+			"csignal": "cpp",
+			"cstdarg": "cpp",
+			"cstddef": "cpp",
+			"cstdint": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"cstring": "cpp",
+			"ctime": "cpp",
+			"cwchar": "cpp",
+			"cwctype": "cpp",
+			"deque": "cpp",
+			"exception": "cpp",
+			"coroutine": "cpp",
+			"forward_list": "cpp",
+			"fstream": "cpp",
+			"future": "cpp",
+			"iomanip": "cpp",
+			"ios": "cpp",
+			"iosfwd": "cpp",
+			"iostream": "cpp",
+			"istream": "cpp",
+			"latch": "cpp",
+			"limits": "cpp",
+			"list": "cpp",
+			"locale": "cpp",
+			"map": "cpp",
+			"memory": "cpp",
+			"mutex": "cpp",
+			"new": "cpp",
+			"numbers": "cpp",
+			"numeric": "cpp",
+			"optional": "cpp",
+			"ostream": "cpp",
+			"queue": "cpp",
+			"random": "cpp",
+			"ranges": "cpp",
+			"ratio": "cpp",
+			"regex": "cpp",
+			"scoped_allocator": "cpp",
+			"semaphore": "cpp",
+			"set": "cpp",
+			"shared_mutex": "cpp",
+			"span": "cpp",
+			"sstream": "cpp",
+			"stack": "cpp",
+			"stdexcept": "cpp",
+			"streambuf": "cpp",
+			"string": "cpp",
+			"string_view": "cpp",
+			"system_error": "cpp",
+			"thread": "cpp",
+			"tuple": "cpp",
+			"type_traits": "cpp",
+			"typeindex": "cpp",
+			"typeinfo": "cpp",
+			"unordered_map": "cpp",
+			"unordered_set": "cpp",
+			"valarray": "cpp",
+			"variant": "cpp",
+			"vector": "cpp",
+			"__functional_base": "cpp",
+			"algorithm": "cpp",
+			"functional": "cpp",
+			"iterator": "cpp",
+			"utility": "cpp",
+			"*.tcc": "cpp",
+			"cuchar": "cpp",
+			"memory_resource": "cpp",
+			"source_location": "cpp",
+			"stop_token": "cpp",
+			"syncstream": "cpp",
+			"__memory": "cpp",
+			"__hash": "cpp",
+			"hash_map": "cpp",
+			"filesystem": "cpp",
+			"__functional_03": "cpp",
+			"__functional_base_03": "cpp"
+		},
+	},
+	"launch": {
+		// 使用 IntelliSense 了解相关属性。
+		// 悬停以查看现有属性的描述。
+		// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "run active file",
+				"type": "lldb",
+				"request": "launch",
+				"program": "${workspaceFolder}/build/${fileBasenameNoExtension}.exe",
+				"args": [],
+				"cwd": "${workspaceFolder}/build",
+				"stopAtEntry": false,
+				"preLaunchTask": "build active file with clang++",
+				"environment": [],
+				"console": "integratedTerminal",
+			},
+		]
+	},
+	"tasks": {
+		"tasks": [
+			{
+				"label": "build active file with clang++",
+				"type": "shell",
+				"command": "clang++",
+				"args": [
+					"-fdiagnostics-color=always",
+					"-g",
+					"-std=c++20",
+					"-I",
+					"**/include",
+					"-D",
+					"YD_DEBUG",
+					// "-include",
+					// ".vscode/include/bits/stdc++.h",
+					"-include-pch",
+					"build/**.pch",
+					"${file}",
+					"-o",
+					"${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"windows": {
+					"args": [
+						"-fdiagnostics-color=always",
+						"-g",
+						"-std=c++20",
+						"-target", // link to libstdc++ using gcc / g++ 
+						"x86_64-pc-windows-gnu", // 注释掉的话在 Windows 上会默认 link to Microsoft's STL using MSVC
+						// "-H", // 查看可以使用的预编译文件（前面带 ! 的是预编译的）
+						"-D",
+						"YD_DEBUG",
+						"${file}",
+						"-o",
+						// "${workspaceFolder}/build/test.exe"
+						"${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
+					],
+				}
+			},
+		],
+		"version": "2.0.0"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools-extension-pack",
+			"vadimcn.vscode-lldb",
+			"rust-lang.rust"
+		]
+	},
+}

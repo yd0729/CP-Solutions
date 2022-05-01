@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/src/Solutions/LeetCode/include"
+            ],
+            "defines": [
+                "YD_DEBUG"
+            ],
+            "cStandard": "c99",
+            "cppStandard": "c++20",
+            "forcedInclude": [],
+            "macFrameworkPath": [
+                "/Library/Frameworks",
+                "/System/Library/Frameworks"
+            ],
+            "intelliSenseMode": "macos-clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ]
+            },
+            "compilerPath": "/usr/bin/clang",
+            "compilerArgs": [
+                "-I",
+                "src/Solutions/include",
+                "src",
+                "-include",
+                "bits/stdc++.h",
+                "-include",
+                "leetcode-algorithm.hpp"
+            ]
+        }
+    ],
+    "version": 4
+}
