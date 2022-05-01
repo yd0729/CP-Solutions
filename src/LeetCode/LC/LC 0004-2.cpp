@@ -1,8 +1,7 @@
-#include "leetcode.hpp" 
-#include <bits/stdc++.h>
-
-using namespace std;
-
+/**
+ * @brief 划分数组
+ * 
+ */
 class Solution {
   public:
     double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2) {

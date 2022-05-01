@@ -1,8 +1,7 @@
-#include "leetcode.hpp" 
-#include <bits/stdc++.h>
-
-using namespace std;
-
+/**
+ * @brief 二分查找
+ * 
+ */
 class Solution {
 public:
     int getKthElement(const vector<int>& nums1, const vector<int>& nums2, int k) {
