@@ -2,7 +2,12 @@
 
 ## 2258. 逃离火灾
 
-正向 BFS ，反向 Dijkstra ．
+正向 BFS ，计算每个位置着火的时间，得到 fire ．
+
+反向 Dijkstra ，反推最迟到达时间，得到 late ．
+
+- Time: $\mathcal{O}(mn)$
+- Space: $\mathcal{O}(mn)$
 
 ## 937. 重新排列日志文件
 
@@ -21,6 +26,12 @@
 如果理解了递归下降子程序，应该也可以顺利写出栈的版本．
 
 栈的版本可以进一步优化，但是我选择 cv ．
+
+## 420. 强密码检查器 ⭐️
+
+[【Sheep】420. 强密码检验器（贪心）](https://leetcode.cn/problems/strong-password-checker/solution/si-lu-qing-xi-c-0ms-by-13261896688/)
+
+考虑三种修改方式在三个方面的影响．
 
 ## 4. 寻找两个正序数组的中位数 ⭐️
 

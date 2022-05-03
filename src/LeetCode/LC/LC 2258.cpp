@@ -34,36 +34,25 @@ class Solution {
         }
 
         memset(late, -1, sizeof late);
-        late[m - 1][n - 1] = fire[m - 1][n - 1];  // 根据题意这里不用 -1 ．
+        late[m - 1][n - 1] = fire[m - 1][n - 1];
 
         using arr3 = array<int, 3>;
-        priority_queue<arr3, vector<arr3>> pq;
+        priority_queue<arr3> pq;
         pq.push({late[m - 1][n - 1], m - 1, n - 1});
 
         while (not pq.empty()) {
             auto [d, x, y] = pq.top();
             pq.pop();
 
-            if (late[x][y] > d) {
-                continue;
-            }
-
             for (int i = 0; i < 4; i++) {
                 int nx = x + dx[i];
                 int ny = y + dy[i];
 
-                if (is_vaild(nx, ny) and
-                    (late[nx][ny] == -1 or late[nx][ny] < d - 1)) {
-                    if (d == 1e9) {
-                        late[nx][ny] = 1e9;
-                    } else {
-                        late[nx][ny] = d - 1;
-                    }
-                    if (fire[nx][ny] != 1e9) {
-                        late[nx][ny] = min(late[nx][ny], fire[nx][ny] - 1);
-                    }
-                    if (late[nx][ny] != -1) {
-                        pq.push({late[nx][ny], nx, ny});
+                if (is_vaild(nx, ny)) {
+                    int nd = min(pre(d), pre(fire[nx][ny]));
+                    if (late[nx][ny] < nd) {
+                        late[nx][ny] = nd;
+                        pq.push({nd, nx, ny});
                     }
                 }
             }
@@ -83,10 +72,12 @@ class Solution {
     const int dx[4] = {0, 0, 1, -1};
     const int dy[4] = {1, -1, 0, 0};
 
-    bool is_vaild(int &x, int &y) {
+    inline bool is_vaild(int &x, int &y) {
         if (x >= 0 and x < m and y >= 0 and y < n) {
             return grid[x][y] != 2;
         }
         return false;
     }
+
+    inline int pre(int &x) { return x == 1e9 ? x : x - 1; }
 };
