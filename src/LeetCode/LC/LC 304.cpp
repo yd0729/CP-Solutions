@@ -1,8 +1,3 @@
-#include "leetcode.hpp" 
-#include <bits/stdc++.h>
-
-using namespace std;
-
 class NumMatrix {
   public:
     vector<vector<int>> sums;

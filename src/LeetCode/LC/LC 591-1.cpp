@@ -68,7 +68,7 @@ class Solution {
                 cur += 1;
             }
         }
-        return false;
+        return true;
     }
 
     bool is_cdata(int r) {

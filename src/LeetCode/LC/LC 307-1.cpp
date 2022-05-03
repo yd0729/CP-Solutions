@@ -1,8 +1,3 @@
-#include "leetcode.hpp" 
-#include <bits/stdc++.h>
-
-using namespace std;
-
 class NumArray {
   private:
     vector<int> sum; // sum[i] 表示第 i 个块的元素和
