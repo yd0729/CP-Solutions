@@ -6,7 +6,7 @@
 
 反向 Dijkstra ，反推最迟到达时间，得到 late ．
 
-TODO: grid 中的 BFS 和 Dijkstra 模板．
+TODO: grid 的 BFS 和 Dijkstra 模板．
 
 - Time: $\mathcal{O}(mn)$
 - Space: $\mathcal{O}(mn)$
@@ -42,6 +42,28 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 [【Sheep】420. 强密码检验器（贪心）](https://leetcode.cn/problems/strong-password-checker/solution/si-lu-qing-xi-c-0ms-by-13261896688/)
 
 分别考虑三种修改方式在三个方面的影响．
+
+## 64. 最小路径和（DP）
+
+## 63. 不同路径 II（DP）
+
+## 62. 不同路径（离散数学） ⭐️
+
+要走 $m+n-2$ 步，从其中选择 $m-1$ （$n-1$）步向下（右）走．于是就是计算组合数了．
+
+组合数是成对出现的，它们的值相同，首先要选那个比较好算的．
+
+计算的技巧是每次乘一个数再除一个数，从大的开始乘，从小的开始除，一定能整除，中间结果也不至于过大．
+
+TODO: 组合数
+
+## 61. 旋转链表（链表） ⭐️
+
+1. 连成一个环
+2. 找到应该断开的位置
+3. 断开
+
+TODO: SingleList 模板
 
 ## 5. 最长回文子串（DP、Manacher） ⭐️
 

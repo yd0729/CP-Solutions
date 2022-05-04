@@ -1,16 +1,19 @@
 # Soultions
 
-Solutions for competitive programming.
+This repo contains my solutions for competitive programming problems.
 
 ## 题解
 
-全部题目的简明题解，按照题号倒序排列．
+全部题目的**简明**题解，按照题号倒序排列．
 
 ⭐️ 是我认为很有价值的题目．
 
 - LeetCode
     - [LC](./LC.md)
     - LCP
+- PTA
+    - PAT
+        - [PAT Advanced Practice](./PAT%20Advanced%20Practice.md)
 
 ## 与算法无关的无聊技巧
 
@@ -22,8 +25,8 @@ static const auto _ = []() {
 
     cin.tie(nullptr);
 
-    cin.iword(1 << 15);
-    cout.iword(1 << 15);
+    cin.iword(1 << 10);
+    cout.iword(1 << 10);
 
     return 0;
 }();
@@ -32,7 +35,7 @@ static const auto _ = []() {
 1. `sync_with_stdio(false)` 关闭 C++ 标准流和相应的 C 标准流之间的同步．
 2. `cin` 默认绑定 `cout` ，导致每次 `cin` 之前 `cout` 都会 `flush()` ．
 3. `cout` 默认绑定的就是 `nullptr` ．
-4. `iword` 在有需要时扩容内部存储，应该能实现和 `fread` 一样的效率，下面是 libcxx 源码．
+4. `iword` 在有需要时扩容内部存储，从而减少系统调用，应该能实现和 `fread` 一样的效率，下面是 libcxx 源码．
 
    ```cpp
    long&

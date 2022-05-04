@@ -36,8 +36,7 @@ class Solution {
         memset(late, -1, sizeof late);
         late[m - 1][n - 1] = fire[m - 1][n - 1];
 
-        using arr3 = array<int, 3>;
-        priority_queue<arr3> pq;
+        priority_queue<array<int, 3>> pq;
         pq.push({late[m - 1][n - 1], m - 1, n - 1});
 
         while (not pq.empty()) {
@@ -49,7 +48,7 @@ class Solution {
                 int ny = y + dy[i];
 
                 if (is_vaild(nx, ny)) {
-                    int nd = min(pre(d), pre(fire[nx][ny]));
+                    int nd = pre(min(d, fire[nx][ny]));
                     if (late[nx][ny] < nd) {
                         late[nx][ny] = nd;
                         pq.push({nd, nx, ny});
@@ -79,5 +78,5 @@ class Solution {
         return false;
     }
 
-    inline int pre(int &x) { return x == 1e9 ? x : x - 1; }
+    inline int pre(int x) { return x == 1e9 ? x : x - 1; }
 };
