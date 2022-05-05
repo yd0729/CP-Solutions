@@ -51,6 +51,22 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 
 分别考虑三种修改方式在三个方面的影响．
 
+## 225. Implement Stack using Queues (queue, stack)
+
+There are basically 3 approaches to solve the problem.
+
+### use 2 queues
+
+When there is only one element in a queue `q1`, it can be seen as a stack directly. So an additional queue `q2` is maintained to make sure only one element is in queue `q1`. But you can choose the time to do the shift: either after pushing or before poping, which will make the time complexity of the operation rise from $\mathcal{O}(1)$ to $\mathcal{O}(n)$ respectively.
+
+#### use 1 queue
+
+We can keep the elements in a queue sorted the same way as they are in a stack. Just invert the elements before every pushing operation.
+
+#### [simulate a linked list](https://leetcode.com/problems/implement-stack-using-queues/discuss/62522/O(1)-purely-with-queues)
+
+a crazy idea.
+
 ## 64. 最小路径和（DP）
 
 ## 63. 不同路径 II（DP）
