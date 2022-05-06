@@ -21,6 +21,10 @@ $$
 f(n,k)=(f(n-1,k)+k'-1)\mod n + 1
 $$
 
+## 1209. Remove All Adjacent Duplicates in String II (stack based solution)
+
+A stack is useful because it allow us to simulate removing substrings without actually having to alter the string. This can be done by storing the substrings in `s` , and removing them once their length reaches `k`. Note also that once a substring is removed, we automatically get accesss to the previous substring, hence automatically 'concatenating' the left and the right substrings.
+
 ## 937. 重新排列日志文件（自定义排序）
 
 自定义排序．
@@ -57,15 +61,15 @@ There are basically 3 approaches to solve the problem.
 
 ### use 2 queues
 
-When there is only one element in a queue `q1`, it can be seen as a stack directly. So an additional queue `q2` is maintained to make sure only one element is in queue `q1`. But you can choose the time to do the shift: either after pushing or before poping, which will make the time complexity of the operation rise from $\mathcal{O}(1)$ to $\mathcal{O}(n)$ respectively.
+<!-- When there is only one element in a queue `q1`, it can be seen as a stack directly. So an additional queue `q2` is maintained to make sure only one element is in queue `q1`. But you can choose the time to do the shift: either after pushing or before poping, which will make the time complexity of the operation rise from $\mathcal{O}(1)$ to $\mathcal{O}(n)$ respectively. -->
 
 #### use 1 queue
 
-We can keep the elements in a queue sorted the same way as they are in a stack. Just invert the elements before every pushing operation.
+<!-- We can keep the elements in a queue sorted the same way as they are in a stack. Just invert the elements before every pushing operation. -->
 
 #### [simulate a linked list](https://leetcode.com/problems/implement-stack-using-queues/discuss/62522/O(1)-purely-with-queues)
 
-a crazy idea.
+another crazy idea.
 
 ## 64. 最小路径和（DP）
 

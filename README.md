@@ -9,8 +9,8 @@ This repo contains my solutions for competitive programming problems.
 ⭐️ 是我认为很有价值的题目．
 
 - LeetCode
-    - [LC](./LC.md)
-    - LCP
+    - [LeetCode](./LeetCode.md)
+    - 力扣
 - PTA
     - PAT
         - [PAT Advanced Practice](./PAT%20Advanced%20Practice.md)
