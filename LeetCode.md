@@ -11,6 +11,8 @@ TODO: grid 的 BFS 和 Dijkstra 模板．
 - Time: $\mathcal{O}(mn)$
 - Space: $\mathcal{O}(mn)$
 
+## 2138. Divide a String Into Groups of Size k
+
 ## 1823. 找出游戏的获胜者（约瑟夫问题、DP） ⭐️
 
 [官方题解](https://leetcode.cn/problems/find-the-winner-of-the-circular-game/solution/zhao-chu-you-xi-de-huo-sheng-zhe-by-leet-w2jd/)
@@ -23,9 +25,15 @@ $$
 
 ## 1679. K 和数对的最大数目（双指针）
 
+## 1218. Longest Arithmetic Subsequence of Given Difference (DP)
+
 ## 1209. Remove All Adjacent Duplicates in String II (stack based solution)
 
 A stack is useful because it allow us to simulate removing substrings without actually having to alter the string. This can be done by storing the substrings in `s` , and removing them once their length reaches `k`. Note also that once a substring is removed, we automatically get accesss to the previous substring, hence automatically 'concatenating' the left and the right substrings.
+
+## 1027. Longest Arithmetic Subsequence (DP)
+
+最长等差子序列．
 
 ## 937. 重新排列日志文件（自定义排序）
 
