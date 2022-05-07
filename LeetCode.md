@@ -21,6 +21,8 @@ $$
 f(n,k)=(f(n-1,k)+k'-1)\mod n + 1
 $$
 
+## 1679. K 和数对的最大数目（双指针）
+
 ## 1209. Remove All Adjacent Duplicates in String II (stack based solution)
 
 A stack is useful because it allow us to simulate removing substrings without actually having to alter the string. This can be done by storing the substrings in `s` , and removing them once their length reaches `k`. Note also that once a substring is removed, we automatically get accesss to the previous substring, hence automatically 'concatenating' the left and the right substrings.
@@ -48,6 +50,25 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 递归下降子程序还是比较通用的方法，从代码量上看其实和栈的方法也没差多少．
 
 如果理解了递归下降子程序，应该也可以顺利写出栈的版本．虽然栈的版本可以进一步优化，但是我选择 cv ．
+
+## 456. 132 Pattern (前缀数组、单调栈) ⭐️
+
+思路和代码来自大佬[「白」](https://leetcode.cn/u/vclip/)．
+
+这道题的要求可以分成两步：
+
+1. 在 $[0, k)$ 中找一个 $j$ ，满足 $nums[k] < nums[j]$
+2. 在 $[0, j)$ 中找一个 $i$ ，满足 $nums[k] > nums[i]$
+
+据此设计数据结构：
+
+1. 为了尽可能找到 $i$ ，要求 $j$ 要尽可能大，即 $j$ 应该是 $k$ 左侧第一个满足 $nums[k] < nums[j]$ 的位置，维护这个位置，可以用单调栈．
+2. 在确定了 $j$ 之后，只要看 $[0, j)$ 中的最小值是否小于 $nums[k]$ 即可，维护 $[0, j)$ 的最小值可以用前缀数组．
+
+## 433. Minimum Genetic Mutation (BFS)
+
+1. DNA 的位序可以当做编码．
+2. 预处理出 `adj` ．
 
 ## 420. 强密码检查器（贪心） ⭐️
 
