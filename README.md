@@ -11,6 +11,7 @@ This repo contains my solutions for competitive programming problems.
 - LeetCode
     - [LeetCode](./LeetCode.md)
     - 力扣
+        - [LCP](./LCP.md)
 - PTA
     - PAT
         - [PAT Advanced Practice](./PAT%20Advanced%20Practice.md)
