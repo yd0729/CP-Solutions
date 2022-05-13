@@ -25,6 +25,18 @@ $$
 
 ## 1679. K 和数对的最大数目（双指针）
 
+## 1419. 数青蛙（模拟）
+
+### 队列模拟
+
+用 5 个队列记录应该叫出某个字符的青蛙的编号．
+
+### 计数模拟
+
+上面的方法太“模拟”了，实际上只有队列的长度有用．
+
+这个问题的性质是，如果一个青蛙应该叫出“r”，那么不管哪个已经叫出“c”的青蛙叫出了这个“r”都可以．
+
 ## 1218. Longest Arithmetic Subsequence of Given Difference (DP)
 
 ## 1209. Remove All Adjacent Duplicates in String II (stack based solution)
@@ -38,6 +50,17 @@ A stack is useful because it allow us to simulate removing substrings without ac
 ## 944. 删列造序
 
 直接遍历．
+
+## 942. 增减字符串匹配（贪心） ⭐️
+
+考虑 `perm[0]` ：
+
+- `s[0] = 'I'` ：令 `perm[0] = 0` ，那么无论 `perm[1]` 是多少都满足 `perm[0] < perm[1]` ．
+- `s[0] = 'D'` ：令 `perm[0] = n` ，那么无论 `perm[1]` 是多少都满足 `perm[0] > perm[1]` ．
+
+确定好 `perm[0]` 后，剩余的 $n−1$ 个字符和 $n$ 个待确定的数就变成了一个和原问题相同，但规模为 $n−1$ 的问题。
+
+当只剩一个数时，直接填入即可．
 
 ## 937. 重新排列日志文件（自定义排序）
 
