@@ -25,11 +25,16 @@ class Solution {
         do {
             int q = (p + 1) % n;
             for (int r = 0; r < n; r++) {
-                /* 如果 r 在 pq 的右侧，则 q = r （只能保证没有点在 q 右侧，不能保证所有点都在 q 左侧）*/
+                /* 如果 r 在 pq 的右侧，则 q = r */
                 if (cross(trees[p], trees[q], trees[r]) < 0) {
                     q = r;
                 }
             }
+            if (!visit[q]) {
+                res.emplace_back(trees[q]);
+                visit[q] = true;
+            }
+            
             /* 是否存在点 i, 使得 p 、q 、i 在同一条直线上 */
             for (int i = 0; i < n; i++) {
                 if (visit[i] || i == p || i == q) {
@@ -40,10 +45,7 @@ class Solution {
                     visit[i] = true;
                 }
             }
-            if (!visit[q]) {
-                res.emplace_back(trees[q]);
-                visit[q] = true;
-            }
+
             p = q;
         } while (p != leftMost);
         return res;

@@ -18,6 +18,7 @@ class Solution {
                  }
                  return a[0] < b[0];
              });
+             
         vector<vector<int>> hull;
         /* 求出凸包的下半部分 */
         for (int i = 0; i < n; i++) {
