@@ -6,8 +6,6 @@
 
 反向 Dijkstra ，反推最迟到达时间，得到 late ．
 
-TODO: grid 的 BFS 和 Dijkstra 模板．
-
 - Time: $\mathcal{O}(mn)$
 - Space: $\mathcal{O}(mn)$
 
@@ -78,7 +76,7 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 
 1. 三角形的三个点一定在凸包上，可以反证．所以只要在在凸包上组合枚举 a, b, c （即不考虑顺序，所以可以令 a < b < c）．
 2. 本题的凸包不需要考虑共线（见笔记），但要求凸包的点一定是顺时针或逆时针的．
-3. 在确定了 ab 之后， c 与三角形面积的关系是一个凸函数，面积的最大值在c = 极点时取得．
+3. 在确定了 ab 之后， c 与三角形面积的关系是一个凸函数，面积的最大值在 c = 极点时取得．
 4. 在确定了 a 之后，如果 b 从小到大枚举，则函数的极点也一定会增大，于是 c 不必再从 b 枚举，而只须从上次取得极点的位置开始枚举，这一优化将时间复杂度从 $\mathcal{O}(n^3)$ 降到了 $\mathcal{O}(n^2)$ ．
 
 ## 713. 乘积小于 K 的子数组（滑动窗口） ⭐️
@@ -146,6 +144,12 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 
 分别考虑三种修改方式在三个方面的影响．
 
+## 255. 验证前序遍历序列二叉搜索树（单调栈） ⭐️
+
+思路来自[yuruiyin](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/solution/java-liang-chong-jie-fa-by-npe_tle/)．
+
+维护一个单调递减栈（从栈底到栈顶），如某一状态下栈元素为 `[5,4,3]` 。若碰到一个 6 的时候，说明从左子树（或者没有左子树）到达了右子树，此时将小于 6 的元素都 pop 掉，栈变成 `[6]`,并且记录一个最小值为 5，由于 6 是右子树，因此 6 右侧的元素都必须大于 5，否则不合法。
+
 ## 225. Implement Stack using Queues (queue, stack)
 
 There are basically 3 approaches to solve the problem.
@@ -158,9 +162,15 @@ There are basically 3 approaches to solve the problem.
 
 <!-- We can keep the elements in a queue sorted the same way as they are in a stack. Just invert the elements before every pushing operation. -->
 
-#### [simulate a linked list](https://leetcode.com/problems/implement-stack-using-queues/discuss/62522/O(1)-purely-with-queues)
+#### [simulate a linked list](<https://leetcode.com/problems/implement-stack-using-queues/discuss/62522/O(1)-purely-with-queues>)
 
 another crazy idea.
+
+## 216. 组合总和 III ⭐️
+
+### 子集枚举
+
+### 二进制枚举
 
 ## 117. 填充每个节点的下一个右侧节点指针 II（树的层序遍历） ⭐️
 
@@ -170,7 +180,7 @@ another crazy idea.
 
 ## 63. 不同路径 II（DP）
 
-## 62. 不同路径（离散数学） ⭐️
+## 62. 不同路径（离散数学、组合数） ⭐️
 
 要走 $m+n-2$ 步，从其中选择 $m-1$ （$n-1$）步向下（右）走．于是就是计算组合数了．
 
@@ -178,15 +188,11 @@ another crazy idea.
 
 计算的技巧是每次乘一个数再除一个数，从大的开始乘，从小的开始除，一定能整除，中间结果也不至于过大．
 
-TODO: 组合数
-
 ## 61. 旋转链表（链表） ⭐️
 
 1. 连成一个环
 2. 找到应该断开的位置
 3. 断开
-
-TODO: SingleList 模板
 
 ## 47. 全排列 II（组合数学、可重集全排列） ⭐️
 
