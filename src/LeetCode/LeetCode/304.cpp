@@ -1,6 +1,6 @@
 class NumMatrix {
   public:
-    vector<vector<int>> sums;
+    vector<vector<int>> sums;  // sum[i][j] 存储以 (i, j) 为右下角的矩阵的和
 
     NumMatrix(vector<vector<int>> &matrix) {
         int m = matrix.size();

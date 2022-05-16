@@ -144,25 +144,29 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 
 分别考虑三种修改方式在三个方面的影响．
 
+## 307. 区域和检索 - 数组可修改（RMQ 问题） ⭐️
+
+## 304. 二维区域和检索 - 矩阵不可变（二维前缀和） ⭐️
+
+## 303. 区域和检索 - 数组不可变（前缀和）
+
 ## 255. 验证前序遍历序列二叉搜索树（单调栈） ⭐️
 
 思路来自[yuruiyin](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/solution/java-liang-chong-jie-fa-by-npe_tle/)．
 
 维护一个单调递减栈（从栈底到栈顶），如某一状态下栈元素为 `[5,4,3]` 。若碰到一个 6 的时候，说明从左子树（或者没有左子树）到达了右子树，此时将小于 6 的元素都 pop 掉，栈变成 `[6]`,并且记录一个最小值为 5，由于 6 是右子树，因此 6 右侧的元素都必须大于 5，否则不合法。
 
-## 225. Implement Stack using Queues (queue, stack)
+## 225. 用队列实现栈（队列、栈）
 
-There are basically 3 approaches to solve the problem.
+### 两个队列
 
-### use 2 queues
+为了满足栈的特性，即最后入栈的元素最先出栈，在使用队列实现栈时，应满足队列前端的元素是最后入栈的元素。可以使用两个队列实现栈的操作，其中 queue1 用于存储栈内的元素， queue2 作为入栈操作的辅助队列。
 
-<!-- When there is only one element in a queue `q1`, it can be seen as a stack directly. So an additional queue `q2` is maintained to make sure only one element is in queue `q1`. But you can choose the time to do the shift: either after pushing or before poping, which will make the time complexity of the operation rise from $\mathcal{O}(1)$ to $\mathcal{O}(n)$ respectively. -->
+#### 一个队列
 
-#### use 1 queue
+入栈操作时，首先获得入栈前的元素个数 n，然后将元素入队到队列，再将队列中的前 n 个元素（即除了新入栈的元素之外的全部元素）依次出队并入队到队列，此时队列的前端的元素即为新入栈的元素，且队列的前端和后端分别对应栈顶和栈底。
 
-<!-- We can keep the elements in a queue sorted the same way as they are in a stack. Just invert the elements before every pushing operation. -->
-
-#### [simulate a linked list](<https://leetcode.com/problems/implement-stack-using-queues/discuss/62522/O(1)-purely-with-queues>)
+#### [模拟链表](<https://leetcode.com/problems/implement-stack-using-queues/discuss/62522/O(1)-purely-with-queues>)
 
 another crazy idea.
 
