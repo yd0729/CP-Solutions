@@ -35,6 +35,10 @@ $$
 
 这个问题的性质是，如果一个青蛙应该叫出“r”，那么不管哪个已经叫出“c”的青蛙叫出了这个“r”都可以．
 
+## 1379. 找出克隆二叉树中的相同节点（二叉树）
+
+同步深搜．
+
 ## 1302. 层数最深叶子节点的和（树的遍历、深搜）
 
 ## 1218. Longest Arithmetic Subsequence of Given Difference (DP)
@@ -46,6 +50,8 @@ A stack is useful because it allow us to simulate removing substrings without ac
 ## 1027. Longest Arithmetic Subsequence (DP)
 
 最长等差子序列．
+
+## 953. 验证外星语词典（自定义排序）
 
 ## 944. 删列造序
 
@@ -175,6 +181,22 @@ another crazy idea.
 ### 子集枚举
 
 ### 二进制枚举
+
+## 154. 寻找旋转排序数组中的最小值 II（二分查找） ⭐️
+
+![图 4](.media/0ae1661f89c6bee94d8b6d2dcea268f233f95a52a8b6d2517aed22e9b2fdbdfa.png)  
+![图 5](.media/0f64cd20df336a0ca3eb90dfd74e458402a388d55597d700f5ef87eec64ea88c.png)  
+![图 6](.media/a8af9b4eba649b7ed7fe0d639557f7c0a6ff244fc3a8bdf611c8a440a6649492.png)  
+
+「第三种情况是 `nums[pivot]==nums[high]` 。如下图所示，由于重复元素的存在，我们并不能确定 `nums[pivot]` 究竟在最小值的左侧还是右侧，因此我们不能莽撞地忽略某一部分的元素。我们唯一可以知道的是，由于它们的值相同，所以无论 `nums[high]` 是不是最小值，都有一个它的「替代品」`nums[pivot]`，因此我们可以忽略二分查找区间的右端点。」
+
+![图 7](.media/ba0241f8eb4b13c2deeaa888b50d380a818b8b5c4baa81bcab6704712131d437.png)  
+
+## 153. 寻找旋转排序数组中的最小值（二分查找） ⭐️
+
+![图 1](.media/080ed8ba297ff83b758c4f38c45538d12c9d88a52d3225dc77bef1b469788061.png)  
+![图 2](.media/a0e0a0a7b2cbd06235e01ff6ad381f2470f02b320ad5682f4873a516a6a0f8fe.png)  
+![图 3](.media/d1cdbc6d3ae8b137a2d9c100f48a1258623e5cd42b22f6e7290c1f3f0bd08b7f.png)  
 
 ## 117. 填充每个节点的下一个右侧节点指针 II（树的层序遍历） ⭐️
 
