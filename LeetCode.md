@@ -23,6 +23,8 @@ $$
 
 ## 1679. K 和数对的最大数目（双指针）
 
+## 1568. 使陆地分离的最少天数（Tarjan 算法） ⭐️
+
 ## 1419. 数青蛙（模拟）
 
 ### 队列模拟
@@ -46,6 +48,8 @@ $$
 ## 1209. Remove All Adjacent Duplicates in String II (stack based solution)
 
 A stack is useful because it allow us to simulate removing substrings without actually having to alter the string. This can be done by storing the substrings in `s` , and removing them once their length reaches `k`. Note also that once a substring is removed, we automatically get accesss to the previous substring, hence automatically 'concatenating' the left and the right substrings.
+
+## 1192. 查找集群内的「关键连接」（Tarjan 算法） ⭐️
 
 ## 1027. Longest Arithmetic Subsequence (DP)
 
@@ -100,6 +104,12 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 官解的剪枝策略是，如果某个新加的贴纸不能让当前的 mask 变得更小，就不再计算了．
 
 另外，这种题应该没有贪心的解法，本质上只能暴力枚举，就看怎么剪枝了．
+
+## 668. 乘法表中第k小的数（二分查找） ⭐️
+
+1. 反向问题：对于乘法表中的数字 x，它是乘法表中第几小的数字？
+2. 计算出公式，发现关于 x 单调．
+3. 二分查找．
 
 ## 591. 标签验证器（递归下降子程序、栈的应用） ⭐️
 
