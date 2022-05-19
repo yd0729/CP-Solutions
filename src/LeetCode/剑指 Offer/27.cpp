@@ -14,11 +14,10 @@ class Solution {
             return nullptr;
         }
 
-        auto il = mirrorTree(root->right);
-        auto ir = mirrorTree(root->left);
-
-        root->left = il;
-        root->right = ir;
+        mirrorTree(root->left);
+        mirrorTree(root->right);
+        
+        swap(root->left, root->right);
 
         return root;
     }
