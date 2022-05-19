@@ -16,10 +16,12 @@ class Solution {
         if (not root) {
             return nullptr;
         }
-        auto il = invertTree(root->right);
-        auto ir = invertTree(root->left);
-        root->left = il;
-        root->right = ir;
+
+        invertTree(root->right);
+        invertTree(root->left);
+
+        swap(root->left, root->right);
+        
         return root;
     }
 };
