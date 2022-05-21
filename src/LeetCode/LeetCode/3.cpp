@@ -2,7 +2,7 @@ class Solution {
   public:
     int lengthOfLongestSubstring(string s) {
 
-        vector<int> idx(256, -1); // 字符->最后出现的位置
+        vector<int> idx(256, -1); // 字符 -> 最后出现的位置
 
         int res = 0;
         int start = 0; // 当前子串的开始位置
