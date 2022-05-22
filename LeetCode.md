@@ -261,6 +261,13 @@ dijkstra 记录当前的最远距离，可以得出正确答案，但是格子�
 
 ## 303. 区域和检索 - 数组不可变（前缀和）
 
+## 292. Nim 游戏（博弈、数学） ⭐️
+
+1. 只要拿完之后剩 4 块，那就必胜了，因为对手无法全拿走 4 块，所以最后一块一定是我拿的．
+2. 往前推，只要拿完之后剩 8, 12, 16 ... 块，那就必胜了．
+3. 所以只要第一次玩完之后，剩余 4 的倍数就必胜．
+4. 也就是只要石头总数不是 4 的倍数，那就必胜．
+
 ## 255. 验证前序遍历序列二叉搜索树（单调栈） ⭐️
 
 思路来自 [yuruiyin](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/solution/java-liang-chong-jie-fa-by-npe_tle/)．
