@@ -13,7 +13,6 @@ class Solution {
                 cur--;
             }
         }
-        str = str.substr(cur + 1);
-        return str;
+        return str.substr(cur + 1);
     }
 };
