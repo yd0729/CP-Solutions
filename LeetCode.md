@@ -148,6 +148,11 @@ C++ 20 的 `string_view` 和 `<=>` 也可以，但是 LeetCode 目前只支持 C
 
 见笔记，本题的凸包是考虑共线的点的．
 
+## 464. 我能赢吗（博弈、记忆化搜索） ⭐️
+
+1. 状态压缩
+2. dfs 的含义是「当前状态先手能否取胜」．
+
 ## 462. 最少移动次数使数组元素相等 II（快速选择算法） ⭐️
 
 1. 假设数组元素都变成 $x$ 时，所需移动数最少，首先求出 $x$ ．
@@ -258,7 +263,7 @@ dijkstra 记录当前的最远距离，可以得出正确答案，但是格子�
 
 ## 255. 验证前序遍历序列二叉搜索树（单调栈） ⭐️
 
-思路来自[yuruiyin](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/solution/java-liang-chong-jie-fa-by-npe_tle/)．
+思路来自 [yuruiyin](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/solution/java-liang-chong-jie-fa-by-npe_tle/)．
 
 维护一个单调递减栈（从栈底到栈顶），如某一状态下栈元素为 `[5,4,3]` 。若碰到一个 6 的时候，说明从左子树（或者没有左子树）到达了右子树，此时将小于 6 的元素都 pop 掉，栈变成 `[6]`,并且记录一个最小值为 5，由于 6 是右子树，因此 6 右侧的元素都必须大于 5，否则不合法。
 
