@@ -125,6 +125,10 @@
 			"__functional_03": "cpp",
 			"__functional_base_03": "cpp"
 		},
+		"java.project.sourcePaths": [
+			".vscode/java",
+			"src/LeetCode/LeetCode"
+		],
 	},
 	"launch": {
 		// 使用 IntelliSense 了解相关属性。
