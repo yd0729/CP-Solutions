@@ -2,7 +2,9 @@
     "configurations": [
         {
             "name": "Mac",
-            "includePath": [],
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
             "defines": [
                 "YD_DEBUG"
             ],
@@ -25,6 +27,8 @@
                 ".vscode/cpp/include",
                 "-include",
                 "bits/stdc++.h",
+                "-include",
+                "leetcode.hpp",
                 "-include",
                 "leetcode-algorithm.hpp",
                 "-include",

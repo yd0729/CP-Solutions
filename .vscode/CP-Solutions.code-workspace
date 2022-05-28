@@ -123,7 +123,8 @@
 			"hash_map": "cpp",
 			"filesystem": "cpp",
 			"__functional_03": "cpp",
-			"__functional_base_03": "cpp"
+			"__functional_base_03": "cpp",
+			"*.inc": "cpp"
 		},
 		"java.project.sourcePaths": [
 			".vscode/java",

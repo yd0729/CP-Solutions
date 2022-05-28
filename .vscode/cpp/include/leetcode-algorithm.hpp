@@ -3,6 +3,5 @@
 
 #include "_leetcode-algorithm/andrew.hpp"
 #include "_leetcode-algorithm/binary_tree.hpp"
-#include "_leetcode-algorithm/list.hpp"
 
 #endif
