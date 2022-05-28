@@ -55,6 +55,8 @@ $$
 
 同步深搜．
 
+## 1342. 将数字变成 0 的操作次数
+
 ## 1302. 层数最深叶子节点的和（树的遍历、深搜）
 
 ## 1218. Longest Arithmetic Subsequence of Given Difference (DP)
@@ -68,6 +70,8 @@ A stack is useful because it allow us to simulate removing substrings without ac
 ## 1027. Longest Arithmetic Subsequence (DP)
 
 最长等差子序列．
+
+## 1021. 删除最外层的括号
 
 ## 965. 单值二叉树
 
@@ -337,6 +341,8 @@ dijkstra 记录当前的最远距离，可以得出正确答案，但是格子�
 ## 304. 二维区域和检索 - 矩阵不可变（二维前缀和） ⭐️
 
 ## 303. 区域和检索 - 数组不可变（前缀和）
+
+## 295. 数据流的中位数（优先队列、有序集合） ⭐️
 
 ## 292. Nim 游戏（博弈、数学） ⭐️
 
