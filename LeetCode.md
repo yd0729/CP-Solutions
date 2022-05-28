@@ -351,6 +351,22 @@ dijkstra 记录当前的最远距离，可以得出正确答案，但是格子�
 3. 所以只要第一次玩完之后，剩余 4 的倍数就必胜．
 4. 也就是只要石头总数不是 4 的倍数，那就必胜．
 
+## 268. 丢失的数字 ⭐️
+
+### 交换
+
+### 排序
+
+### 哈希
+
+### 位运算
+
+异或
+
+### 数学
+
+求和
+
 ## 255. 验证前序遍历序列二叉搜索树（单调栈） ⭐️
 
 思路来自 [yuruiyin](https://leetcode.cn/problems/verify-preorder-sequence-in-binary-search-tree/solution/java-liang-chong-jie-fa-by-npe_tle/)．
