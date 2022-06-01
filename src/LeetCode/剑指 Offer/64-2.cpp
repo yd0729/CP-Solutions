@@ -57,8 +57,6 @@ class Solution {
         B >>= 1;
 
         (B & 1) && (ans += A);
-        A <<= 1;
-        B >>= 1;
 
         // n * (n + 1) / 2
         return ans >> 1;
