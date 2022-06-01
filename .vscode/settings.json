@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "vector": "cpp",
+        "__config": "cpp",
+        "__tuple": "cpp",
+        "chrono": "cpp",
+        "ios": "cpp",
+        "span": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "typeindex": "cpp",
+        "variant": "cpp",
+        "array": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "functional": "cpp",
+        "mutex": "cpp",
+        "regex": "cpp",
+        "tuple": "cpp",
+        "valarray": "cpp",
+        "unordered_set": "cpp"
+    }
+}
